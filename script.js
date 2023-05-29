@@ -11,15 +11,18 @@ function convertCurrency()
     // 讀取 rate.xml 檔案
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "rate.xml", true);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
+    xhr.onreadystatechange = function () 
+    {
+        if (xhr.readyState === 4 && xhr.status === 200) 
+        {
             var xmlDoc = xhr.responseXML;
             var rates = xmlDoc.getElementsByTagName("rate");
 
             var usRate, euroRate, yenRate, wonRate, audRate;
 
             // 遍歷匯率資訊，找到對應的匯率
-            for (var i = 0; i < rates.length; i++) {
+            for (var i = 0; i < rates.length; i++) 
+            {
                 var currency = rates[i].getAttribute("currency");
                 var rate = parseFloat(rates[i].getAttribute("value"));
 
@@ -51,11 +54,17 @@ function convertCurrency()
             document.getElementById("wonAmount").innerHTML = "韓元：" + wonAmount.toFixed(2);
             document.getElementById("audAmount").innerHTML = "澳幣：" + audAmount.toFixed(2);
         }
-    };
+        else 
+        {
+            // 請求失敗，處理錯誤
+            console.log("Error: " + xhr.status);
+        };
     xhr.send();
+    }
 }
 
-function resetCalculator() {
+function resetCalculator() 
+{
     document.getElementById("taiwanAmount").value = "";
     document.getElementById("usAmount").innerHTML = "";
     document.getElementById("euroAmount").innerHTML = "";
