@@ -1,6 +1,7 @@
 function convertCurrency() 
 {
     var taiwanAmount = parseFloat(document.getElementById("taiwanAmount").value);
+    // 輸入檢查功能，若使用者輸入的內容非有效數值，按下執行計算的按鈕後會跳出警告，並觸發重新開始(reset)功能
     if (isNaN(taiwanAmount)) 
     {
         alert("請輸入有效的數值");
@@ -43,6 +44,7 @@ function convertCurrency()
             var audAmount = taiwanAmount * audRate;
 
             // 更新結果
+            // 計算結果呈現的數值至少要顯示到小數點下第 2 位
             document.getElementById("usAmount").innerHTML = "美金：" + usAmount.toFixed(2);
             document.getElementById("euroAmount").innerHTML = "歐元：" + euroAmount.toFixed(2);
             document.getElementById("yenAmount").innerHTML = "日圓：" + yenAmount.toFixed(2);
