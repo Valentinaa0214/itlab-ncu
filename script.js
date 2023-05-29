@@ -58,9 +58,9 @@ function convertCurrency()
         {
             // 請求失敗，處理錯誤
             console.log("Error: " + xhr.status);
-        };
-    xhr.send();
+        }
     }
+    xhr.send();
 }
 
 function resetCalculator() 
