@@ -27,6 +27,8 @@ input[type="number"] {
   
   /* 3. 使用漸變背景 */
 button {
+    margin-top: 10px;
+    padding: 10px 20px;
     background: linear-gradient(to right, #333, #666);
     color: #fff;
   }
