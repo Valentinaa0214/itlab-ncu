@@ -1,0 +1,9 @@
+<!--創建一個名稱為 "rate.xml" 的檔案並以 XML 格式儲存匯率-->
+<?xml version="1.0" encoding="UTF-8"?>
+<rates>
+    <rate currency="USD" value="0.035" />
+    <rate currency="EUR" value="0.030" />
+    <rate currency="JPY" value="3.90" />
+    <rate currency="KRW" value="39.13" />
+    <rate currency="AUD" value="0.048" />
+</rates>
