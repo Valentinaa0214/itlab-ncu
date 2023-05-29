@@ -1,7 +1,12 @@
 function convertCurrency() 
 {
     var taiwanAmount = parseFloat(document.getElementById("taiwanAmount").value);
-
+    if (isNaN(taiwanAmount)) 
+    {
+        alert("請輸入有效的數值");
+        resetCalculator();
+        return;
+    }
     // 讀取 rate.xml 檔案
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "rate.xml", true);
